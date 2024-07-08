@@ -1,14 +1,15 @@
-/*styles for my first WordPress Website
+/*styles for my First WordPress website
 Name: First Theme
 Author: LaMonte Golden
 Date: July 2024
 */
 
 *{
-    padding:0;
-    margin:0;
-    box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box; 
 }
- body{
-    background: beige;
- }
+
+body{
+    background:beige;
+}
