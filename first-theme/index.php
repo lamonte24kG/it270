@@ -14,6 +14,7 @@
 if we have any posts or pages, show them !!!-->
 
 <?php if(have_posts()) : ?>
+<!--We need to show the posts by using a while loop in the world of PHP !!!-->
 <?php while(have_posts()): the_posts(); ?> 
 <?php the_content(); ?>
 
