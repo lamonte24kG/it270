@@ -13,8 +13,13 @@
 <!--our question of the day is
 if we have any posts or pages, show them !!!-->
 
-<?php if(have_posts()) ; ?>
+<?php if(have_posts()) : ?>
+<?php while(have_posts()): the_posts(); ?> 
+<?php the_content(); ?>
 
+<?php endwhile; ?>
+
+<?php endif; ?>
 
 </body>
 </html>
