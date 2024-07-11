@@ -10,4 +10,10 @@ add_filter('excerpt_length', 'my_excerpt_length');
 
 set_post_thumbnail_size(200, 200);
 add_theme_support('post-thumbnails');
-//
+
+// Register our navigation
+
+register_nav_menus(array(
+'primary' => 'Primary Menu',
+'footer' => 'Footer'
+));

@@ -27,7 +27,6 @@ header{
 #inner-header{
     max-width: 1200px;
     margin: 0 auto;
-    height: 100px;
     background: tan;
 }
 
@@ -48,11 +47,22 @@ main{
     float: left;
 }
 
+aside{
+    float: right;
+    width: 35%;
+    height: 400px;
+    background: #ddd;
+}
+
 
 footer{
     background-color: #ccc;
     height: 300px;
     clear: both;
+}
+
+.nav-button{
+    display: none;
 }
 
 /* typography */
@@ -103,3 +113,6 @@ comment-form p{
 .commentlist {
     margin: 10px 0 15px 30px;
 }
+
+
+/*  the beginning of our media queries */
