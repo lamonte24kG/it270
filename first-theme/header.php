@@ -23,18 +23,14 @@
 
 <nav id="site-navigation" class="main-navigation">
 <button class="nav-button">Toggle Navigation</button>
-
-
 <?php
 $args_primary = array(
-'theme_location' => 'primary'
-);
-?>
-
-<?php wp_nav_menu('$args_primary');
-?>
-
+'theme_location' => 'primary',
+'items_wrap' => '<ul class="primary-nav">%3$s</ul>'
+);?>
+<?php wp_nav_menu($args_primary); ?>
 </nav>
+
 </div>
 <!-- close inner-header -->
 
