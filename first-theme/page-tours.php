@@ -6,6 +6,10 @@ get_header();
 <!--our question of the day is
 if we have any posts or pages, show them !!!-->
 
+<div id="hero">
+<img src="<?php echo get_template_directory_uri();?>/images/yellowstone-inner.jpg" alt="Yellowstone">
+</div>
+
 <div id="wrapper">
 <main>
 <?php if(have_posts()) : ?>

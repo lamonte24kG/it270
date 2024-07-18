@@ -23,3 +23,5 @@ function my_theme_scripts() {
     wp_enqueue_script( 'astuteo', get_template_directory_uri() . '/js/astuteo.js', '1.0.0', false );
     }
     add_action( 'wp_enqueue_scripts', 'my_theme_scripts' );
+
+
