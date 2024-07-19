@@ -53,6 +53,7 @@ background-repeat: no-repeat;
 
 #hero img{
 	display: none;
+	max-width: 100%;
 }
 
 .inner-page #hero{
