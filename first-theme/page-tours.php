@@ -25,11 +25,10 @@ if we have any posts or pages, show them !!!-->
 </main>
 
 
-<aside>
 
-
+<aside id="secondary" class="widget-area">
+<?php dynamic_sidebar('sidebar-tours'); ?>
 </aside>
-
 
 </div>
 <!-- close wrapper -->

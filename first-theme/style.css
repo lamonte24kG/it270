@@ -33,6 +33,26 @@ header{
 	clear: both;
 }
 
+#inner-footer{
+    max-width: 1200px;
+    margin: 0 auto;
+    background: tan;
+	padding: 10px 0;
+}
+
+.row{
+	overflow: hidden;
+}
+
+.third{
+	width: 31.91%;
+	float: left;
+	margin-right: 2.12%;
+}
+
+.third:last-of-type{
+	margin-right: 0;
+}
 /* this our background image!!! */
 
 #hero{
@@ -78,7 +98,7 @@ header{
 
 #wrapper{
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 20px auto 40px auto;
 }
 
 .error404 #wrapper,
@@ -98,10 +118,21 @@ aside{
     background: #ddd;
 }
 
+/* aside styles */
+
+.wp-block-heading{
+	background-color: red;
+    color: white;
+    padding: 10px;
+}
+#secondary ul li{
+	list-style-type: none;
+	margin-left: 5px;
+}
 
 footer{
     background-color: #ccc;
-    height: 300px;
+
     clear: both;
 }
 

@@ -35,11 +35,48 @@ function my_theme_scripts() {
         'before_title' => '<h3>',
         'after_title' => '</h3>'
         ));
+
+        register_sidebar(array(
+            'name' => 'Sidebar About',
+            'id' => 'sidebar-about',
+            'before_widget' => '<div class="inner-widget">',
+            'after_widget' => '</div>',
+            'before_title' => '<h3>',
+            'after_title' => '</h3>'
+            ));
+
+        register_sidebar(array(
+            'name' => 'Sidebar Tours',
+            'id' => 'sidebar-tours',
+            'before_widget' => '<div class="inner-widget">',
+            'after_widget' => '</div>',
+            'before_title' => '<h3>',
+            'after_title' => '</h3>'
+                ));
+            
+        register_sidebar(array(
+            'name' => 'Sidebar Footer',
+            'id' => 'sidebar-footer',
+            'before_widget' => '<div class="row">',
+            'after_widget' => '</div>',
+            'before_title' => '<h3>',
+            'after_title' => '</h3>'
+                ));
+
+        register_sidebar(array(
+            'name' => 'Sidebar Contact',
+            'id' => 'sidebar-contact',
+            'before_widget' => '<div class="inner-widget">',
+            'after_widget' => '</div>',
+            'before_title' => '<h3>',
+            'after_title' => '</h3>'
+            ));
+                
+
         } // end function init widgets
         // add action AFTER the function
         add_action('widgets_init', 'init_widgets');
-
-
+        
 //  Functions to display a list of all the shortcodes
 function diwp_get_list_of_shortcodes(){
  
