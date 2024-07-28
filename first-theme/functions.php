@@ -48,7 +48,7 @@ function my_theme_scripts() {
         register_sidebar(array(
             'name' => 'Sidebar Tours',
             'id' => 'sidebar-tours',
-            'before_widget' => '<div class="inner-widget">',
+            'before_widget' => '<div class="inner-tours">',
             'after_widget' => '</div>',
             'before_title' => '<h3>',
             'after_title' => '</h3>'

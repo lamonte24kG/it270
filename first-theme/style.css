@@ -20,7 +20,8 @@ header{
 
 #top{
     padding: 10px 30px 10px 10px;
-    background: orange;
+    /*background: orange;*/
+	background: #a69851;
 	overflow: hidden;
 
 }
@@ -28,16 +29,18 @@ header{
 #inner-header{
     max-width: 1200px;
     margin: 0 auto;
-    background: tan;
+    /*background: tan;*/
 	padding: 10px 20px 10px 0;
 	clear: both;
+	
 }
 
-#inner-footer{
+.inner-footer{
     max-width: 1200px;
     margin: 0 auto;
-    background: tan;
+    /*background: tan;*/
 	padding: 10px 0;
+	clear: both;
 }
 
 .row{
@@ -48,6 +51,7 @@ header{
 	width: 31.91%;
 	float: left;
 	margin-right: 2.12%;
+	padding: 0 1%;
 }
 
 .third:last-of-type{
@@ -56,7 +60,7 @@ header{
 /* this our background image!!! */
 
 #hero{
-    background: red;
+    background: #fff;
 }
 
 .home #hero{
@@ -65,7 +69,7 @@ header{
 );
 background-attachment: fixed;
 background-size: 100%;
-background-position: 0 100px;
+background-position: 0 110px;
 min-height: 550px;
 max-width: 100%;
 background-repeat: no-repeat;
@@ -73,7 +77,6 @@ background-repeat: no-repeat;
 
 #hero img{
 	display: none;
-	max-width: 100%;
 }
 
 .inner-page #hero{
@@ -83,17 +86,21 @@ background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: 100%;
 background-position: 0 100px;
-min-height: 350px;
+min-height: 370px;
 max-width: 100%;
 background-repeat: no-repeat;
 }
 
 header{
-	background: yellow;
+	/*background: yellow;*/
+	background: #fff;
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
+	/*ADDED PADDING BOTTOM*/
+	padding: 0 0 10px 0;
+	border-bottom: 1px solid #888;
 }
 
 #wrapper{
@@ -114,8 +121,6 @@ main{
 aside{
     float: right;
     width: 35%;
-    height: 400px;
-    background: #ddd;
 }
 
 /* aside styles */
@@ -125,6 +130,7 @@ aside{
     color: white;
     padding: 10px;
 }
+
 #secondary ul li{
 	list-style-type: none;
 	margin-left: 5px;
@@ -189,7 +195,83 @@ footer{
 #top #searchform{
 	float: right;
 }
+
+main .attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
+	width: 100%;
+	height: auto;
+	margin-bottom: 15px;
+  }
 /* typography */
+
+.home h1{
+	font-size: 3em;
+	text-align: center;
+	margin-bottom: 14px;
+}
+/*span not working*/
+.third span a {
+	display: block;
+	color: brown;
+	font-style: italic;
+	margin-top: 5px;
+	font-size: 1.1em;
+}
+
+.row p {
+	font-size: .92em;
+}
+
+.third h3 {
+	font-size: 1.18em;
+	margin-bottom: 10px;
+	color: #f28d35;
+}
+
+
+aside ul {
+	margin-left: 5%;
+	margin-bottom: 12px;
+	list-style-type: none;
+}
+
+footer h2 {
+	text-align: center;
+	font-size: 2.4em;
+	margin-bottom: 11px;
+}
+
+.inner-footer ul li {
+	display: inline;
+/*need to center*/
+
+}
+p {
+	margin-bottom: 20px;
+	line-height: 1.4;
+}
+
+p + .block {
+	margin:-10px 0 10px 0;
+}
+
+.title {
+	font-size: 2em;
+	margin-bottom: 10px;
+}
+
+.meta span {
+	display: block;
+	font-style: italic;
+}
+
+h1, h2, h3 {
+	font-family: playfair, serif;
+	color:blue;
+}
+
+a {
+	color: brown;
+}
 
 p{
     margin-bottom: 20px;

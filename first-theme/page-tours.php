@@ -13,6 +13,11 @@ if we have any posts or pages, show them !!!-->
 <div id="wrapper">
 <main>
 <?php if(have_posts()) : ?>
+<?php  if(has_post_thumbnail()) : ?>
+<a href="<?php the_permalink() ;?>">
+<?php the_post_thumbnail(); ?>
+</a>
+<?php endif ?>
 <!--We need to show the posts by using a while loop in the world of PHP !!!-->
 <?php while(have_posts()): the_post(); ?> 
 <?php the_content(); ?>
