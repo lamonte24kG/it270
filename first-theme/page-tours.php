@@ -33,6 +33,9 @@ if we have any posts or pages, show them !!!-->
 
 <aside id="secondary" class="widget-area">
 <?php dynamic_sidebar('sidebar-tours'); ?>
+
+<?php dynamic_sidebar('sidebar-tours-specials'); ?>
+
 </aside>
 
 </div>

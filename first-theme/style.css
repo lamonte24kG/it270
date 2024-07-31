@@ -43,6 +43,13 @@ header{
 	clear: both;
 }
 
+.inner-specials{
+	margin-top: 20px;
+	background: orange;
+	padding: 3%;
+}
+
+
 .row{
 	overflow: hidden;
 }
@@ -227,6 +234,29 @@ main .attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
 	color: #f28d35;
 }
 
+.inner-widget h3{
+	background: #f28d35;
+	font-size: 1.4em;
+	padding: 3%;
+	color: #fff;
+	margin-bottom: 10px;
+}
+
+.inner-tours h3{
+	font-size: 1.4em;
+	color: #f28d35;
+}
+
+/*not working background color is still red*/
+.inner-tours{
+	background: #eee;
+	padding: 3%;
+}
+
+/*red background was still showing, made it transparent*/
+.wp-block-heading{
+	background: transparent;
+}
 
 aside ul {
 	margin-left: 5%;

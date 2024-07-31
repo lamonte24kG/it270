@@ -15,7 +15,9 @@ add_theme_support('post-thumbnails');
 
 register_nav_menus(array(
 'primary' => 'Primary Menu',
-'footer' => 'Footer'
+'footer' => 'Footer Menu',
+'tours' => 'Tours Menu',
+'hotel' => 'Hotel Menu'
 ));
 
 //enqueuing my scripts
@@ -49,6 +51,15 @@ function my_theme_scripts() {
             'name' => 'Sidebar Tours',
             'id' => 'sidebar-tours',
             'before_widget' => '<div class="inner-tours">',
+            'after_widget' => '</div>',
+            'before_title' => '<h3>',
+            'after_title' => '</h3>'
+                ));
+
+        register_sidebar(array(
+            'name' => 'Sidebar Tours Specials',
+            'id' => 'sidebar-tours-specials',
+            'before_widget' => '<div class="inner-specials">',
             'after_widget' => '</div>',
             'before_title' => '<h3>',
             'after_title' => '</h3>'
@@ -101,4 +112,58 @@ function diwp_get_list_of_shortcodes(){
 }
 add_shortcode('get-shortcode-list', 'diwp_get_list_of_shortcodes');
 
+function covid_disclaimer(){
+    return '<p><small>Before you purchase your tickets, please check with everyone that you can think of to make sure that you are good to go (Covid-free), because these tickets are not refundable.
+    </small></p>';
+}
+
+add_shortcode('disclaimer','covid_disclaimer');
+
+function specials(){
+    //add a switch
+    //if today is Sunday, show me Sunday's specials
+    if(isset($_GET['today'])) {
+        $today = $_GET['today'];
+    } else{
+    $today = date('l');
+    }
+
+    switch($today){
+    case 'Sunday' :
+    $content = 'Today\'s special takes us to the Alaskan Glacier! Let\'s add some information about the wonderful Glaciers. To learn more about our Glacier Specials, click <a href="">here!</a>';
+
+    case 'Monday' :
+    $content = 'Today\'s special takes us to the Golden State of California! Let\'s add some information about the wonderful wineries in California. To learn more about our California Specials, click <a href="">here!</a>';
+
+    case 'Tuesday' :
+    $content = 'Today\'s special takes us to Mt Denali. Let\'s add some information about the wonderful scenery in Alaska. To learn more about Mt Denali, click <a href="">here!</a>';
+
+    case 'Wednesday' :
+    $content = 'Today\'s special takes us to Lake Louise. Let\'s add some information about the wonderful lakes in Canada, including Lake Louise. To learn more about Lake Louise and British Columbia, click <a href="">here!</a>';
+
+    case 'Thursday' :
+    $content = 'Today\'s special takes us to the state of Wyoming and Yellowstone.So much to see at Yellowstone, from Old Faithful, to Mamouth Fall, to buffalo! To learn more about Yellowstone, click <a href="">here!</a>';
+
+    case 'Friday' :
+    $content = 'Today\'s special takes us to the Nappa Valley!  To learn more about our Nappa Valley Specials, click <a href="">here!</a>';
+
+    case 'Saturday' :
+    $content = 'Today\'s special takes us to the state of Washington and our wineries. Chateau Ste Michell and Columbia on the west side, and who can forget, Walla  Walla on the eastern side of the state. To learn more about Washington and our wonderful wines, click <a href="">here!</a>';
+
+    }//closing switch
+
+return $content;
+}//closing the function
+
+add_shortcode('today_specials','specials');
+
+add_filter( 'widget_text' , 'do_shortcode' );
+
+function today_date(){
+    return date('l\, F jS Y');
+}
+
+add_shortcode('current_date', 'today_date');
+
+add_filter( 'widget_text' , 'do_shortcode' );
 
