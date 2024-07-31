@@ -165,5 +165,5 @@ function today_date(){
 
 add_shortcode('current_date', 'today_date');
 
-add_filter( 'widget_text' , 'do_shortcode' );
+add_filter('widget_text' , 'do_shortcode');
 
