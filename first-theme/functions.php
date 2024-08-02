@@ -79,10 +79,18 @@ function my_theme_scripts() {
             'id' => 'sidebar-contact',
             'before_widget' => '<div class="inner-widget">',
             'after_widget' => '</div>',
-            'before_title' => '<h3>',
-            'after_title' => '</h3>'
+            'before_title' => '<h2>',
+            'after_title' => '</h2>'
             ));
                 
+        register_sidebar(array(
+            'name' => 'Sidebar Buy',
+            'id' => 'sidebar-buy',
+            'before_widget' => '<div class="inner-buy">',
+            'after_widget' => '</div>',
+            'before_title' => '<h3>',
+            'after_title' => '</h3>'
+           ));
 
         } // end function init widgets
         // add action AFTER the function
@@ -127,6 +135,7 @@ function specials(){
     } else{
     $today = date('l');
     }
+print ($today);
 
     switch($today){
     case 'Sunday' :
@@ -155,9 +164,9 @@ function specials(){
 return $content;
 }//closing the function
 
-add_shortcode('today_specials','specials');
+add_shortcode('today_specials', 'specials');
 
-add_filter( 'widget_text' , 'do_shortcode' );
+add_filter('widget_text', 'do_shortcode' );
 
 function today_date(){
     return date('l\, F jS Y');

@@ -40,6 +40,7 @@ if we have any posts or pages, show them !!!-->
 
 </div>
 <!-- close wrapper -->
+<?php dynamic_sidebar('sidebar-buy'); ?>
 
 <?php
 get_footer();
