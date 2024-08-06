@@ -242,7 +242,6 @@ footer{
 	position: absolute;
 	background: #fff;
 	padding: 5px;
-	/* top: 24px; --not working moves box above navigation, works fine without it */
 	width: 180px;
 	
 }
@@ -265,6 +264,7 @@ footer{
 	bottom: 20px;
 	right: 10px;
 	z-index: 1000;
+	height: 5px !important;
 }
 
 main .attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
@@ -579,13 +579,18 @@ comment-form p{
 		display: block;
 	}
 
-	main{
+	main, aside {
+		float: none;
+		width:auto;
+	}
+
+	/*main{
 		width: 60%;
 	}
 
 	aside{
 		width: 37%;
-	}
+	}*/
 
 
 }
@@ -657,7 +662,7 @@ comment-form p{
 		top: 10px;
 		right: 10px;
 		z-index: 1000;
-		height: 30px;
+		height: 5px;
 	}
 
 	h1, h2, h3 {
@@ -703,8 +708,8 @@ comment-form p{
 		margin: 0 3% 40px 3%;
 	}
 
-	.wp-block-heading{
-		text-align: center;
+	.inner-buy .wp-block-heading{
+		text-align: center !important;
 	}
 
 	.blog main,

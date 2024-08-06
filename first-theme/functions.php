@@ -135,7 +135,7 @@ function specials(){
     } else{
     $today = date('l');
     }
-print ($today);
+/*print ($today);*/
 
     switch($today){
     case 'Sunday' :
@@ -168,13 +168,13 @@ add_shortcode('today_specials', 'specials');
 
 add_filter('widget_text', 'do_shortcode' );
 
-function today_date(){
+function today_date() {
     return date('l\, F jS Y');
 }
 
 add_shortcode('current_date', 'today_date');
 
-add_filter('widget_text' , 'do_shortcode');
+add_filter( 'widget_text' , 'do_shortcode' );
 
 
 remove_filter('the_content', 'wpautop');
