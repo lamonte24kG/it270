@@ -1,0 +1,35 @@
+/*
+ Theme Name:   Blank Slate Child Theme
+ description: 
+   A child theme of the Blank Slate default WordPress theme
+ Author:       LaMonte Golden
+ Template:     blankslate
+ Version:      1.0.0
+*/
+
+body{
+    background: rgb(155, 159, 161);
+}
+
+#header{
+  background: tan;
+  width: 200px;
+  height: 100%;
+  position:fixed;
+  top:0;
+  left:0;
+}
+
+#wrapper{
+  max-width:1200px;
+  margin: 100px 0 60px 220px;
+}
+
+#logo{
+  width: 200px;
+}
+
+h1{
+  font-size: 2em;
+  color: red;
+}
